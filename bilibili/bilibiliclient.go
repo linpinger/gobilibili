@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/bitly/go-simplejson"
+	"github.com/daviddengcn/go-colortext"
 )
 
 const (
@@ -197,6 +198,7 @@ func (bili *BiliBiliClient) parseDanMu(message string) {
 			return
 		}
 
+		ct.Foreground(ct.Green, true)
 		fmt.Println(commentUser, " say: ", commentText)
 		return
 	}
