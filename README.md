@@ -10,10 +10,9 @@
 
 ## 下载并编译
 
-    go get github.com/linpinger/gobilibili
-	cd src/github.com/linpinger/gobilibili
-	go build main.go
-	./main 97202
+    go get   github.com/linpinger/gobilibili
+	go build github.com/linpinger/gobilibili
+	./gobilibili 97202
 
 ## ChangeLog
 
