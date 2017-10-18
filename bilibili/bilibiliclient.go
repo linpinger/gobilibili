@@ -165,6 +165,7 @@ func (bili *BiliBiliClient) ReceiveMessageLoop() {
 }
 
 func (bili *BiliBiliClient) parseDanMu(message string) {
+	defer ct.ResetColor()
 	dic, err := simplejson.NewJson([]byte(message))
 	if err != nil {
 		fmt.Println("Json decode error failed: ", err)
@@ -198,8 +199,10 @@ func (bili *BiliBiliClient) parseDanMu(message string) {
 			return
 		}
 
+		ct.Foreground(ct.Yellow, true)
+		fmt.Print(commentUser, ": ")
 		ct.Foreground(ct.Green, true)
-		fmt.Println(commentUser, " say: ", commentText)
+		fmt.Println(commentText)
 		return
 	}
 
