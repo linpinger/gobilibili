@@ -8,9 +8,12 @@
 
 - 后期，准备将字幕加上颜色来区分各种弾幕，这个有现成的库
 
-## 安装
+## 下载并编译
 
     go get github.com/linpinger/gobilibili
+	cd src/github.com/linpinger/gobilibili
+	go build main.go
+	./main 97202
 
 ## ChangeLog
 
