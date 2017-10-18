@@ -1,3 +1,23 @@
+# gobilibili fork by fox
+
+## 缘起
+
+- 最近决定将Linux作为主系统，大部分需求都解决了，就是看B站直播没有弾幕比较苦恼
+
+- 在github上找到了这个项目，正好懂一点golang，修改一下很好用
+
+- 后期，准备将字幕加上颜色来区分各种弾幕，这个有现成的库
+
+## 安装
+
+    go get github.com/linpinger/gobilibili
+
+## ChangeLog
+
+- 2017-10-13: 修改 example/main.go 使用命令行 main roomID 来显示弾幕
+
+*******************************
+
 # gobilibili
 
 B 站直播弹幕 Go 版。
