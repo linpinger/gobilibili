@@ -1,4 +1,4 @@
-package gobilibili
+package bilibili
 
 import (
 	"bytes"

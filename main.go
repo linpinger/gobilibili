@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/linpinger/gobilibili"
+	"github.com/linpinger/gobilibili/bilibili"
 	"os"
 	"strconv"
 	"fmt"
