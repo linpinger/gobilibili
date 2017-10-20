@@ -27,7 +27,7 @@ type BiliBiliClient struct {
 	protocolversion uint16
 	ChatHost        string
 	serverConn      net.Conn
-	uid             int
+	uid             int64
 }
 
 func NewBiliBiliClient() *BiliBiliClient {
@@ -68,7 +68,8 @@ func (bili *BiliBiliClient) HeartbeatLoop() {
 
 // SendJoinChannel define
 func (bili *BiliBiliClient) SendJoinChannel(channelId int) {
-	bili.uid = rand.Intn(max) + min
+	bili.uid = rand.Int63n(max) + min
+	fmt.Println("uid:", bili.uid)
 	body := fmt.Sprintf("{\"roomid\":%d,\"uid\":%d}", channelId, bili.uid)
 	bili.SendSocketData(0, 16, bili.protocolversion, 7, 1, body)
 }

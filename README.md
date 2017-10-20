@@ -13,7 +13,11 @@
     go get   github.com/linpinger/gobilibili
 	./bin/gobilibili 97202
 
+- 最小编译: go build -ldflags "-s -w" github.com/linpinger/gobilibili
+
 ## ChangeLog
+
+- 2017-10-20: 修正只能编译为64位的问题，原因是uid数字比int大，修改为int64，这样就ok了
 
 - 2017-10-18: 修改弾幕颜色
 
